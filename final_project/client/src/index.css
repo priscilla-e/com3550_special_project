@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .animate-pop-in {
+        animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.65, 0.52) forwards;
+    }
+}
+
+body {
+    @apply bg-radial-custom relative;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes ping {
+    0% {
+        border-color: #f6e35a;
+        box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
+    }
+    50% {
+        border-color: #f8c031;
+        box-shadow: 0 0 0 0.5rem rgba(248, 165, 49, 0);
+    }
+    100% {
+        border-color: #f6e35a;
+        box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
+    }
+}
+
+/* Fancy animation for showing the "Game Over" element */
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
