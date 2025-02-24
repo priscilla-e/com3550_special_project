@@ -1,9 +1,9 @@
 from flask import request
 from app.gpt import gpt_bp
 from app.extensions import client
-from app.api.utils import get_model
+from app.gpt.utils import get_model
 
-# GET: '/api/'
+# GET: '/api/gpt'
 @gpt_bp.route('/gpt', methods=['GET'])
 def home():
     return {
