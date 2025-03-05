@@ -1,0 +1,52 @@
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.add-task-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-task-form input {
+  flex: 1;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  transition: border-color 0.25s;
+}
+
+.add-task-form input:focus {
+  border-color: #4fc3dc;
+  outline: none;
+}
+
+.add-task-form button {
+  background-color: #28a745;
+  border-radius: 4px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+.add-task-form button:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .add-task-form {
+    flex-direction: column;
+  }
+} 
