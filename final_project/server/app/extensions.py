@@ -17,6 +17,6 @@ cors = CORS(origin="*")
 """
 Initialize the OpenAI client
 
-Ensure you have the OPENAI_API_KEY environment variable set in your .env file
+Ensure you have the API_KEY environment variable set in your .env file
 """
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", "default"))
+client = OpenAI(api_key=os.getenv("API_KEY", "default"))
